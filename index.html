@@ -76,6 +76,134 @@
     
     
     
+    <article id="title-面试题复习01" class="article article-type-title" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/04/16/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%A4%8D%E4%B9%A001/"
+    >面试题复习01</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/04/16/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%A4%8D%E4%B9%A001/" class="article-date">
+  <time datetime="2020-04-16T03:04:45.000Z" itemprop="datePublished">2020-04-16</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%B8%A9%E6%95%85%E7%9F%A5%E6%96%B0/">温故知新</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h5 id="1-请写出你最常用的10个linux命令"><a href="#1-请写出你最常用的10个linux命令" class="headerlink" title="1.请写出你最常用的10个linux命令"></a>1.请写出你最常用的10个linux命令</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ps 查询程序</span><br><span class="line">kill xkill 关闭程序</span><br><span class="line">crontab 设置定时任务</span><br><span class="line">tree 查看目录机构</span><br><span class="line">yum 安装</span><br><span class="line">ln 建立连接</span><br><span class="line">cp 复制文件</span><br><span class="line">tar 解压缩</span><br><span class="line">remove 移动文件</span><br><span class="line">cat head 看文件</span><br><span class="line">touch 建立文件</span><br><span class="line">mkdir 创建文件夹</span><br><span class="line">chmod 修改权限</span><br><span class="line">netstat 查看端口任务</span><br><span class="line">top 看系统运行</span><br><span class="line">history 看历史执行命令</span><br><span class="line">find 查找</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="2-用shell写出输出数字0到100中3的倍数"><a href="#2-用shell写出输出数字0到100中3的倍数" class="headerlink" title="2.用shell写出输出数字0到100中3的倍数"></a>2.用shell写出输出数字0到100中3的倍数</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for i in range(100):</span><br><span class="line">	if i%3==0:</span><br><span class="line">		print('3的倍数:',i)</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="3-请写出一段python代码实现删除一个list里面的重复元素"><a href="#3-请写出一段python代码实现删除一个list里面的重复元素" class="headerlink" title="3.请写出一段python代码实现删除一个list里面的重复元素"></a>3.请写出一段python代码实现删除一个list里面的重复元素</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dlist=list(set(dlist))</span><br><span class="line">经测试,千万级别的数据在1秒内完成去重(0.5秒,一千万条在0-10000中的随机数据)</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="4-请写出TCP和UDP的区别"><a href="#4-请写出TCP和UDP的区别" class="headerlink" title="4.请写出TCP和UDP的区别"></a>4.请写出TCP和UDP的区别</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">TCP是基于连接的协议,在通信之前会建立三次握手连接,数据传输可靠,拥有拥塞控制机制,在通信堵塞的情况下会抑制发送进程</span><br><span class="line">UPD是面向非连接的协议,不需建立连接直接发送数据包,低延时但是不可靠,只管发不保证接收,没有拥塞控制机制</span><br><span class="line">前者适合可靠性要求高的通信场景,后者适合数据可靠性要求不高,对延时要求不高的通信场景</span><br><span class="line"></span><br><span class="line">三次握手:</span><br><span class="line">第一次,client向server发送请求,此时syn为1,seq为client序列,表示建立连接</span><br><span class="line">第二次,server向client返回请求,此时syn为1,seq为server序列,ack为client序列+1,表示可以建立连接</span><br><span class="line">第三次,client向server发送请求,此时syn为0,seq为client序列+1,ack为server序列+1,表示ok,那我们建立连接吧</span><br><span class="line"></span><br><span class="line">四次挥手:</span><br><span class="line">第一次:client向server发送请求,此时fin为1,表示主动关闭 处于finnal_wait1状态,终止等待状态</span><br><span class="line">第二次:server向client返回请求,表示已接收到请求 处于close_wait状态,等待关闭状态</span><br><span class="line">第三次:server向client发送请求,表示可以关闭了,处于last_ack,最后确认状态</span><br><span class="line">第四次:client向server发送一个ack应答,client会处于time_wait状态,服务端收到后才会关闭连接,服务端也处于close状态</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="5-http常见的状态码和意义"><a href="#5-http常见的状态码和意义" class="headerlink" title="5.http常见的状态码和意义"></a>5.http常见的状态码和意义</h5><p>1开头,表示信息处理</p>
+<p>2开头,表示成功处理</p>
+<p>3开头,重定向处理</p>
+<p>4开头,客户端错误</p>
+<p>5开头,服务端错误</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">200 请求成功</span><br><span class="line">201 请求增加资源成功</span><br><span class="line">301 重定向</span><br><span class="line">400 请求参数错误</span><br><span class="line">401 未验证</span><br><span class="line">403 禁止请求</span><br><span class="line">404 请求不存在</span><br><span class="line">405 请求方式错误</span><br><span class="line">500 服务器错误</span><br><span class="line">501 禁止请求</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="6-HTTP协议中get和post请求的区别"><a href="#6-HTTP协议中get和post请求的区别" class="headerlink" title="6.HTTP协议中get和post请求的区别?"></a>6.HTTP协议中get和post请求的区别?</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在规范上,get请求是用来请求资源,post请求用创建或者修改资源</span><br><span class="line">get请求的参数在url上可见,post的参数在url上是不可见的</span><br><span class="line">get请求的url长度是有限制的最大长度是2048个字符,post请求则没有限制</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="7-HTTP协议是什么-有什么缺点-HTTPS协议的原理"><a href="#7-HTTP协议是什么-有什么缺点-HTTPS协议的原理" class="headerlink" title="7.HTTP协议是什么,有什么缺点,HTTPS协议的原理"></a>7.HTTP协议是什么,有什么缺点,HTTPS协议的原理</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http协议是超文本传输协议,属于应用层,用来规定客户端和服务端进行通信应该遵守的规范,最大的缺点是不安全,可能会被监听和窃取传输数据,而且是明文传输,https协议加入了ssl协议,要求通过证书来保证通信的加密安全</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="8-从浏览器上输入一个地址qq-com到在浏览器上看到网页-背后发生了什么-涉及到什么网络协议"><a href="#8-从浏览器上输入一个地址qq-com到在浏览器上看到网页-背后发生了什么-涉及到什么网络协议" class="headerlink" title="8.从浏览器上输入一个地址qq.com到在浏览器上看到网页,背后发生了什么,涉及到什么网络协议?"></a>8.从浏览器上输入一个地址qq.com到在浏览器上看到网页,背后发生了什么,涉及到什么网络协议?</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第一步,先进行域名解析,找到域名ip,然后和web服务器建立TCP连接</span><br><span class="line">第二步,浏览器向web服务器发送http请求,通过三次握手建立通信连接</span><br><span class="line">第三步,web服务器响应请求,返回对应的资源</span><br><span class="line">第四步,浏览器解析返回的资源,比如html文件等,渲染成页面</span><br><span class="line">中间会有防火墙,代理服务器,应用逻辑处理等等过程</span><br><span class="line">设计到tcp,ip,http,socket等协议,还有其他的安全协议</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="9-简述mysql和redis的区别"><a href="#9-简述mysql和redis的区别" class="headerlink" title="9.简述mysql和redis的区别"></a>9.简述mysql和redis的区别</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql是关系型数据库,数据会存放在磁盘中</span><br><span class="line">redis是非关系型内存数据库,数据会存放在内存中</span><br><span class="line">mysql因为存在磁盘中,因此操作效率低,但是存放空间大,是持久化存储</span><br><span class="line">redis是内存操作,因此速度快,但是只有20个库,空间小,在内存中是作为缓存存在</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="10-描述数组-链表-队列-堆栈的区别"><a href="#10-描述数组-链表-队列-堆栈的区别" class="headerlink" title="10.描述数组,链表,队列,堆栈的区别"></a>10.描述数组,链表,队列,堆栈的区别</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">数组是一块连续的内存空间,用来存放数据</span><br><span class="line">链表则是一块块非连续的内存空间,每一块会记录着下一块的地址</span><br><span class="line">队列和栈都可以用数组或者链表来实现,队列是先进先出的模式,栈是先进后出的模式</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="11-hash算法的原理-常用的hash结构有哪些"><a href="#11-hash算法的原理-常用的hash结构有哪些" class="headerlink" title="11.hash算法的原理,常用的hash结构有哪些?"></a>11.hash算法的原理,常用的hash结构有哪些?</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">哈希算法是一种哈希函数,可以将明文映射成一定长度的密文,只有加密过程没有解密过程.</span><br><span class="line">常见的哈希算法有md4 md5 sha1</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="12-单例模式和工厂模式"><a href="#12-单例模式和工厂模式" class="headerlink" title="12.单例模式和工厂模式"></a>12.单例模式和工厂模式</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">单例模式就是保证整个系统,这个类设计为只有一个类实例,每次使用的都是同一个类实例,比如说一个config配置文件类,如果希望整个系统使用的都是同一个类实例,就可以设置为单例模式</span><br><span class="line">工厂模式和单例模式对应,可以进行多个不同的实例化,比较灵活</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="13-假如一个类写了10万行代码-要怎么样进行处理优化"><a href="#13-假如一个类写了10万行代码-要怎么样进行处理优化" class="headerlink" title="13.假如一个类写了10万行代码,要怎么样进行处理优化"></a>13.假如一个类写了10万行代码,要怎么样进行处理优化</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">如果可以.我会回到过去叫他们不要在一个类写10万行代码..</span><br><span class="line">根据类的特性,继承,封装,多态</span><br><span class="line">我会根据这个类的不同类别进行继承,然后根据不同的功能来进行封装</span><br><span class="line">可以公共封装的工具就单独封装出来</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="14-封装成对象有好什么好处"><a href="#14-封装成对象有好什么好处" class="headerlink" title="14.封装成对象有好什么好处"></a>14.封装成对象有好什么好处</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码是给人看的,封装对象首先就是容易理解,也容易扩展</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="15-类方法和对象方法的区别"><a href="#15-类方法和对象方法的区别" class="headerlink" title="15.类方法和对象方法的区别"></a>15.类方法和对象方法的区别</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">类方法属于类,对象方法属于对象</span><br><span class="line">类不可以调用对象方法,但是对象方法可以调用类方法</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="16-正则re-findall和re-search的区别"><a href="#16-正则re-findall和re-search的区别" class="headerlink" title="16.正则re.findall和re.search的区别"></a>16.正则re.findall和re.search的区别</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">findall会查找出所有符合条件的数据</span><br><span class="line">search 会查找到第一个然后返回</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B8%A9%E6%95%85%E7%9F%A5%E6%96%B0/" rel="tag">温故知新</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+</article>
+    
     <article id="post-20200414" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
